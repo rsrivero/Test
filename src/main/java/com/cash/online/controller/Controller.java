@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 import com.cash.online.dto.LoanDTO;
 import com.cash.online.dto.LoanResponse;
@@ -73,7 +74,7 @@ public class Controller {
 	public ResponseEntity<LoanResponse> getLoans(@RequestParam("page") int page, 
 			  							         @RequestParam("size") int size,
 			  							         @RequestParam("user_id") Optional<Long>	id) {
-		Pageable pagination = PageRequest.of(page, size);
+		Pageable pagination = PageRequest.of(page, size, Sort.by("id"));
 
 		Page<Loan> data;
 		if (id.isPresent()) {
