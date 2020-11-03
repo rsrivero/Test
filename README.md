@@ -11,3 +11,5 @@ Instrucciones para iniciar la app:
 4- Correr la aplicacion (Run > Spring Boot App)
 
 5- Correr los 2 inserts que estan en data.sql dentro del proyecto para cargar un user y varios loans
+
+Extra: El paginado comienza con la page en 0
